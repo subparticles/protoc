@@ -3,7 +3,7 @@ FROM debian:10.1-slim
 RUN apt-get update
 RUN apt-get install curl zip -y
 
-ENV PROTOC_VERSION=3.10.1
+ENV PROTOC_VERSION=22.0
 ENV OS_VERSION=linux-x86_64
 ENV PROTOC_ZIP=protoc-$PROTOC_VERSION-$OS_VERSION.zip
 
