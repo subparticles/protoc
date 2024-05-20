@@ -3,10 +3,10 @@ FROM debian:10.1-slim
 RUN apt-get update
 RUN apt-get install curl zip -y
 
-ENV PROTOC_VERSION=21.12
+ENV PROTOC_VERSION=25.3
 ENV OS_VERSION=linux-x86_64
 ENV PROTOC_ZIP=protoc-$PROTOC_VERSION-$OS_VERSION.zip
-ENV PROTOC_GEN_GRPC_JAVA_VERSION=1.62.2
+ENV PROTOC_GEN_GRPC_JAVA_VERSION=1.64.0
 
 RUN curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v$PROTOC_VERSION/$PROTOC_ZIP
 RUN unzip -o $PROTOC_ZIP -d /usr/local bin/protoc
